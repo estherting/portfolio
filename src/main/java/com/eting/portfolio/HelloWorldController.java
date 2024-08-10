@@ -1,4 +1,4 @@
-package com.portfolio.portfolio;
+package com.eting.portfolio;
 
 import org.springframework.web.bind.annotation.GetMapping;
 import org.springframework.web.bind.annotation.RestController;
