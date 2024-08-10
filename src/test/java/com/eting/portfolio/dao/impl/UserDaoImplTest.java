@@ -1,9 +1,9 @@
 package com.eting.portfolio.dao.impl;
 
-import com.eting.portfolio.dao.impl.UserDaoImpl;
 import com.eting.portfolio.domain.User;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
+import org.mockito.ArgumentMatchers;
 import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
@@ -35,6 +35,15 @@ public class UserDaoImplTest {
                 eq("INSERT INTO users (id, name, email) VALUES (?, ?, ?)"),
                 eq(1L), eq("Harry Potter"), eq("hp@gmail.com")
         );
+    }
+
+    @Test
+    public void testGenerateGetByIdSql() {
+        underTest.getById(1L);
+        verify(jdbcTemplate).query(
+                eq("SELECT id, name, email FROM users WHERE id = ? LIMIT 1"),
+                ArgumentMatchers.<UserDaoImpl.UserRowMapper>any(),
+                eq(1L));
     }
 
 }
