@@ -12,7 +12,7 @@ import static org.mockito.ArgumentMatchers.eq;
 import static org.mockito.Mockito.verify;
 
 @ExtendWith(MockitoExtension.class)
-public class UserDaoImplTest {
+public class AppUserDaoImplTest {
 
     @Mock
     private JdbcTemplate jdbcTemplate;

@@ -1,14 +1,14 @@
 package com.eting.portfolio.dao;
 
-import com.eting.portfolio.domain.User;
+import com.eting.portfolio.entity.AppUser;
 
 import java.util.Optional;
 import java.util.List;
 
 public interface UserDao {
-    void create(User user);
-    Optional<User> getById(Long inId);
-    List<User> getAll();
-    void update(User inUser);
+    void create(AppUser appUser);
+    Optional<AppUser> getById(Long inId);
+    List<AppUser> getAll();
+    void update(AppUser inAppUser);
     void delete(Long inId);
 }
