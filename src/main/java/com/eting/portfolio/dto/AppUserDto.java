@@ -1,4 +1,4 @@
-package com.eting.portfolio.domain;
+package com.eting.portfolio.dto;
 
 import lombok.AllArgsConstructor;
 import lombok.Builder;
@@ -9,8 +9,7 @@ import lombok.NoArgsConstructor;
 @AllArgsConstructor
 @NoArgsConstructor
 @Builder
-public class User {
-
+public class AppUserDto {
     private Long id;
     private String name;
     private String email;
