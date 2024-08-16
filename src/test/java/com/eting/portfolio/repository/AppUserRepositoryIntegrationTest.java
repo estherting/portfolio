@@ -3,7 +3,6 @@ package com.eting.portfolio.repository;
 import com.eting.portfolio.PortfolioApplication;
 import com.eting.portfolio.TestDataUtil;
 import com.eting.portfolio.entity.AppUser;
-import com.eting.portfolio.repository.AppUserRepository;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
 import org.springframework.beans.factory.annotation.Autowired;
