@@ -69,11 +69,11 @@ public class AppUserControllerIntegrationTest {
                 MockMvcRequestBuilders.get("/users")
                         .contentType(MediaType.APPLICATION_JSON)
         ).andExpect(
-                MockMvcResultMatchers.jsonPath("$[0].id").isNumber()
+                MockMvcResultMatchers.jsonPath("$[-1].id").isNumber()
         ).andExpect(
-                MockMvcResultMatchers.jsonPath("$[0].name").value(user.getName())
+                MockMvcResultMatchers.jsonPath("$[-1].name").value(user.getName())
         ).andExpect(
-                MockMvcResultMatchers.jsonPath("$[0].email").value(user.getEmail())
+                MockMvcResultMatchers.jsonPath("$[-1].email").value(user.getEmail())
         );
     }
 
